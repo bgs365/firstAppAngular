@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RECIPES} from './recipe/recipes.mock';
+import {RecipeService} from './recipe/recipe.service';
+import {Recipe} from './recipe/recipe.model';
+
 
 @Component({
   selector: 'app-root',
@@ -7,6 +10,5 @@ import {RECIPES} from './recipe/recipes.mock';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
-  recipes = RECIPES;
+  constructor(){}
 }

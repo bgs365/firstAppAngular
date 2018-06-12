@@ -1,5 +1,5 @@
 import {Recipe} from './recipe.model';
-import {Ingredient} from './model/ingredient.model';
+import {Ingredient} from './ingredient.model';
 
 export const RECIPES: Recipe[] = [
   {
