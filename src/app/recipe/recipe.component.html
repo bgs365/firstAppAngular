@@ -1,4 +1,4 @@
-<mat-card class="example-card" *ngIf="recipe">
+<mat-card class="example-card" [hidden]="!visible" >
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{ recipe.name }}</mat-card-title>
@@ -15,8 +15,8 @@
       <li *ngFor="let instructions of recipe.instructions | strToArray " ></li>
     </ul>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="doSomething()">SEE MORE</button>
-    <button mat-raised-button color="primary">SHARE</button>
+  <mat-card-actions >
+    <button mat-raised-button color="primary" [routerLink]="['/recipe',this.recipe.id]" (click)="doSomething()" > See details </button>
+    <button mat-raised-button color="primary" (click)="deleteRecipe()">Delete</button>
   </mat-card-actions>
 </mat-card>

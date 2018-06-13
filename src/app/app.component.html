@@ -1,5 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header>
+
+</app-header>
+
+<router-outlet>
+  <button mat-raised-button color="primary" [routerLink]="['/recipes']"  > home </button>
+  <button mat-raised-button color="primary" [routerLink]="['/recipe/create']"  > Create </button>
+</router-outlet>
+
 
 

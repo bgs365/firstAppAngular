@@ -21,4 +21,12 @@ export class RecipeService {
     return this.http.get<Recipe>(`${ this._baseUrl }/${ id }`);
   }
 
+  addRecipe(recipe: Recipe){
+     return this.http.post(this._baseUrl, recipe);
+  }
+
+  deleteRecipe(id: number){
+    return this.http.delete(`${ this._baseUrl }/${ id }`);
+  }
+
 }

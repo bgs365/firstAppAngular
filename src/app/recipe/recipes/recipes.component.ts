@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {RecipeService} from '../recipe.service';
 import {Recipe} from '../recipe.model';
+import index from '@angular/cli/lib/cli';
 
 @Component({
   selector: 'app-recipes',
@@ -17,6 +18,10 @@ export class RecipesComponent implements OnInit {
       this.recipes = recipes;
 
     })
+  }
+
+  onDelete(recipe: Recipe){
+    this.recipes.splice((this.recipes.indexOf(recipe)));
   }
 
 }
